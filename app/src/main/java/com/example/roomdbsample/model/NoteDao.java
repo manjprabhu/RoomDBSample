@@ -1,5 +1,6 @@
 package com.example.roomdbsample.model;
 
+import android.arch.lifecycle.LiveData;
 import android.arch.persistence.room.Dao;
 import android.arch.persistence.room.Delete;
 import android.arch.persistence.room.Insert;
@@ -21,6 +22,6 @@ public interface NoteDao {
     int Delete(NoteEntity noteEntity);
 
     @Query("SELECT * from note")
-    List<Note> getAllNote();
+    LiveData<List<Note>> getAllNote();
 
 }
