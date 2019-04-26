@@ -29,13 +29,12 @@ public class LauncherActivity extends AppCompatActivity {
         Toolbar toolbar = findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
 
-
         FloatingActionButton fab = findViewById(R.id.fab);
         fab.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 Intent intent = new Intent();
-                intent.setClass(LauncherActivity.this,MainActivity.class);
+                intent.setClass(LauncherActivity.this, CreateNoteActivity.class);
                 LauncherActivity.this.startActivity(intent);
             }
         });
@@ -54,6 +53,5 @@ public class LauncherActivity extends AppCompatActivity {
         viewModel.getAllNote().observe(this, list -> {
             mCustomAdapter.updateSource(list);
         });
-
     }
 }

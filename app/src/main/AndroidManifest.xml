@@ -10,8 +10,7 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
         <activity
-            android:name=".view.MainActivity"
-            android:label="@string/title_activity_create_note"></activity>
+            android:name=".view.CreateNoteActivity"></activity>
         <activity android:name=".view.LauncherActivity"
             android:theme="@style/AppTheme.NoActionBar">
             <intent-filter>
