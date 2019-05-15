@@ -10,7 +10,6 @@ import lombok.Builder;
 @Builder(toBuilder = true)
 public class NoteEntity {
 
-
     @PrimaryKey(autoGenerate = true)
     @ColumnInfo(name = "note_id")
     public long _id;
@@ -20,5 +19,4 @@ public class NoteEntity {
 
     @ColumnInfo(name = "date")
     public long date;
-
 }

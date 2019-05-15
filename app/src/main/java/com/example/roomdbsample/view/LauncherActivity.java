@@ -19,13 +19,13 @@ public class LauncherActivity extends AppCompatActivity {
 
     private RecyclerView mRecyclerView;
     private CustomAdapter mCustomAdapter;
-    private NoteViewModel viewModel;
+    private NoteViewModel mViewModel;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_create_note);
-        viewModel  = ViewModelProviders.of(this).get(NoteViewModel.class);
+        mViewModel  = ViewModelProviders.of(this).get(NoteViewModel.class);
         Toolbar toolbar = findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
 
@@ -50,7 +50,7 @@ public class LauncherActivity extends AppCompatActivity {
         mRecyclerView = (RecyclerView) findViewById(R.id.rv_note);
         mCustomAdapter =  new CustomAdapter(this,new ArrayList<>(0));
         mRecyclerView.setAdapter(mCustomAdapter);
-        viewModel.getAllNote().observe(this, list -> {
+        mViewModel.getAllNote().observe(this, list -> {
             mCustomAdapter.updateSource(list);
         });
     }

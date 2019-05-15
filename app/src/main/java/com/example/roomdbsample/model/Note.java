@@ -7,7 +7,6 @@ public class Note {
 
     private long date;
 
-
     public long getDate() {
         return date;
     }

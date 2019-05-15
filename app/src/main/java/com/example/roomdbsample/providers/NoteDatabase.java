@@ -10,7 +10,6 @@ import com.example.roomdbsample.model.NoteEntity;
 
 public abstract class NoteDatabase extends RoomDatabase {
 
-
     public abstract NoteDao noteDao();
 
     public static final int VERSION = 1;
